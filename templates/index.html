@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>FitnessGPT AI</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <h2>🏋️ FitnessGPT</h2>
+
+        <button class="new-chat"
+            onclick="newChat()">
+
+            + New Chat
+
+        </button>
+
+        <div id="chatList"></div>
+
+    </div>
+
+    <!-- Main -->
+
+    <div class="main">
+
+        <!-- Chat -->
+
+        <div class="chat-container"
+            id="chatContainer">
+
+        </div>
+
+        <!-- Input -->
+
+        <div class="input-area">
+
+
+            <input type="text"
+                id="userInput"
+                placeholder="Ask fitness question...">
+
+            <button onclick="startVoice()">
+                🎤
+            </button>
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+</body>
+
+</html>
